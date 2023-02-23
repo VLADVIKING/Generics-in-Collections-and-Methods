@@ -1,16 +1,14 @@
 import java.util.Random;
 
 public class MagicBox<T> {
-    private T item;
     private T[] items;
-    private int size;
     private int load;
 
     public MagicBox(int size) {
         this.items = (T[]) new Object[size];
     }
 
-    boolean add(T item) {
+    public boolean add(T item) {
         load = 0;
         for (int i = 0; i < items.length; i++) {
             if (items[i] == null) {
